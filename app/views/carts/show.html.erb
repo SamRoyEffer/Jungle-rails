@@ -31,11 +31,7 @@
       </tfoot>
     </table>
   </div>
-  <% else %>
-  <div class="panel panel-default">
-    Maybe you should buy something
-  </div>
-<% end %>
+
   <div class="row">
     <div class="col-xs-12">
       <%= form_tag orders_path do %>
@@ -52,5 +48,10 @@
       <% end %>
     </div>
   </div>
+        <% else %>
+        <div class="alert alert-info" role = "alert">
+        Your cart is empty <a href="/" class="alert-link"> Time to get some items!</a>
+        </div>
 
+        <% end %>
 </section>
