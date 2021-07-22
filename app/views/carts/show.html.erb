@@ -3,7 +3,7 @@
   <header class="page-header">
     <h1>My Cart</h1>
   </header>
-
+  <% if enhanced_cart.any? %>
   <div class="panel panel-default items">
     <table class="table table-bordered">
       <thead>
@@ -31,7 +31,11 @@
       </tfoot>
     </table>
   </div>
-
+  <% else %>
+  <div class="panel panel-default">
+    Maybe you should buy something
+  </div>
+<% end %>
   <div class="row">
     <div class="col-xs-12">
       <%= form_tag orders_path do %>
