@@ -50,7 +50,7 @@
   </div>
         <% else %>
         <div class="alert alert-info" role = "alert">
-        Your cart is empty <a href="/" class="alert-link"> Time to get some items!</a>
+        There is nothing here. <%= link_to "Time to buy things!", root_path, class: "alert-link" %>
         </div>
 
         <% end %>

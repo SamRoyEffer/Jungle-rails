@@ -9,7 +9,7 @@ class UsersController < ApplicationController
 
     if @user.save
       session[:user_id] = @user.id
-      redirect_to('/')
+      redirect_to('http://localhost:3000/')
     else
      render "new"
     end
